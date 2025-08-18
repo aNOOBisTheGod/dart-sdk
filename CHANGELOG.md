@@ -337,7 +337,9 @@ AOT snapshot can be used as follows to run DDC <dart-sdk>/bin/dartaotruntime
 - When running `dart fix` on a folder that contains a library with multiple
   files and more than one needs a fix, the fix will now be applied correctly
   only once to each file (issue [#59572][]).
+- Fixes miscompilation on ARM32 with large numbers of literals (issue [flutter/flutter#172626])
 
+[flutter/flutter#172626]: https://github.com/flutter/flutter/issues/172626
 [#59719]: https://github.com/dart-lang/sdk/issues/59719
 [#59815]: https://github.com/dart-lang/sdk/issues/59815
 [dart_style #1630]: https://github.com/dart-lang/dart_style/issues/1630
