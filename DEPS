@@ -20,6 +20,7 @@ allowed_hosts = [
   'dart.googlesource.com',
   'dart-internal.googlesource.com',
   'fuchsia.googlesource.com',
+  'github.com',
   'llvm.googlesource.com',
 ]
 
@@ -145,7 +146,8 @@ vars = {
   "package_config_rev": "07097d7ae60d40b34ce8daabdce318ecc168b7d1",
   "pool_rev": "bf27900420ba382b6e5c0484ab3c79daad703dcd",
   "protobuf_rev": "b7dd58cdbd879beee4c3fbf8ee80fce8e97bad26",
-  "pub_rev": "58de642dc1d07601f6eb2b4ecd94555c0210106b", # disable tools/rev_sdk_deps.dart
+  "pub_git": "https://github.com/aNOOBisTheGod/pub.git",
+  "pub_rev": "e7f5fc340b66edfc8f663f9c0dde2d8e2f53f04f", # disable tools/rev_sdk_deps.dart
   "pub_semver_rev": "960f91309e325ae037e5f1434acb77b83a12d91e",
   "shelf_rev": "2b5b683e78f5cc84e479a43297fd7b5489d7db02",
   "source_maps_rev": "e5e9d343302acf7df2145316ae4e56026c550989",
@@ -392,7 +394,7 @@ deps = {
   Var("dart_root") + "/third_party/pkg/pub_semver":
       Var("dart_git") + "pub_semver.git" + "@" + Var("pub_semver_rev"),
   Var("dart_root") + "/third_party/pkg/pub":
-      Var("dart_git") + "pub.git" + "@" + Var("pub_rev"),
+      Var("pub_git") + "@" + Var("pub_rev"),
   Var("dart_root") + "/third_party/pkg/shelf":
       Var("dart_git") + "shelf.git" + "@" + Var("shelf_rev"),
   Var("dart_root") + "/third_party/pkg/source_maps":
